@@ -1,0 +1,12 @@
+node_modules/*
+coffee/*
+scss/*
+package.json
+js/*
+grunticon/*
+Gemfile
+Gemfile.lock
+Gruntfile.coffee
+bower.json
+.bowerrc
+.gitignore
