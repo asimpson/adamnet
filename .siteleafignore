@@ -10,3 +10,4 @@ Gruntfile.coffee
 bower.json
 .bowerrc
 .gitignore
+grunt/*
