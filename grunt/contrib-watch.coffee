@@ -3,7 +3,7 @@ module.exports = (grunt) ->
 
   stylesheets:
     files: "scss/**/*"
-    tasks: "compass:dev"
+    tasks: "compass:build"
 
   javascript:
     files: ["coffee/*", "js/*.js"]

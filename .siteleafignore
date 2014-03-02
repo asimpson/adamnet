@@ -11,3 +11,4 @@ bower.json
 .bowerrc
 .gitignore
 grunt/*
+images/*
