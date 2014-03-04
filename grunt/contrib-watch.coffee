@@ -6,7 +6,7 @@ module.exports = (grunt) ->
     tasks: "compass:build"
 
   javascript:
-    files: ["coffee/*", "js/*.js"]
-    tasks: "javascript:dev"
+    files: ["coffee/*"]
+    tasks: "js"
 
   grunt.loadNpmTasks 'grunt-contrib-watch'

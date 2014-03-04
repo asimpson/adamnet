@@ -1,9 +1,15 @@
 module.exports = (grunt) ->
   grunt.config "copy",
-    main:
+    images:
       files: [
         expand: true
         src: "images/*"
+        dest: "assets/"
+      ]
+    fonts:
+      files: [
+        expand: true
+        src: "fonts/*"
         dest: "assets/"
       ]
 

@@ -1,10 +1,17 @@
-# When you change APP, be sure to update it in mylibs/util.js
 window.APP =
+  setContentHeight: ->
+    wrapperEle = $(".page-wrapper")
 
-  methodName: ->
+    wrapperEle.css("margin-top", window.innerHeight+"px")
+    window.onresize = (event) ->
+      wrapperEle.css("margin-top", window.innerHeight+"px")
 
-  # Initializers
-  common:
-    init: ->
+  scrollBg: ->
+    offset = window.pageYOffset / 2.5
+    $(".bg-element").css("top", offset+"px")
 
-APP.common.init()
+  init: ->
+    # window.onscroll = APP.scrollBg
+    APP.setContentHeight()
+
+APP.init()

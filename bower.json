@@ -9,6 +9,8 @@
     "test",
     "tests"
   ],
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "tire": "~1.3.1"
   }
 }

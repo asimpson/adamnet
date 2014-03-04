@@ -1,0 +1,15 @@
+{% capture content %}
+
+  <article>
+    <div class="article-wrapper">
+      {{body}}
+
+      {% if parent %}
+        <p><a href="{{parent.url}}">&larr; Back to {{parent.title}}</a></p>
+      {% endif %}
+    </div>
+  </article>
+
+{% endcapture %}
+
+{% include 'layouts/default' %}
