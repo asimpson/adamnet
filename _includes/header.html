@@ -22,12 +22,16 @@
     <link href="/assets/grunticon/icons.fallback.css" rel="stylesheet">
   </noscript>
 </head>
-<body>
+<body class={% if home? %}"home"{%else%}"post"{%endif%}>
   <nav>
     <ul class="nav-list">
-      <li><a class="icon-github-logo" href="#">Github</a></li>
-      <li><a class="icon-twitter-logo" href="#">Twitter</a></li>
-      <li><a class="icon-adn-logo" href="#">App.net</a></li>
-    </ul>
-  </nav>
+      {% if home? %}
+        <li><a class="icon-github-logo" href="#">Github</a></li>
+        <li><a class="icon-twitter-logo" href="#">Twitter</a></li>
+        <li><a class="icon-adn-logo" href="#">App.net</a></li>
+      {%else%}
+        <li><a class="icon-blog-logo" href="/">Return Home</a></li>
+      {% endif %}
+      </ul>
+    </nav>
   <div class="page-wrapper">

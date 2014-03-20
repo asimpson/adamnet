@@ -6,12 +6,17 @@ window.APP =
     window.onresize = (event) ->
       wrapperEle.css("margin-top", window.innerHeight+"px")
 
-  scrollBg: ->
-    offset = window.pageYOffset / 2.5
-    $(".bg-element").css("top", offset+"px")
+  removeArrow: ->
+    $("nav").addClass("nav-no-arrow")
+
+  syntaxFix: ->
+    $("code").wrap("<pre></pre>")
 
   init: ->
-    # window.onscroll = APP.scrollBg
-    APP.setContentHeight()
+    if $("body").hasClass "home"
+      window.onscroll = APP.removeArrow
+      APP.setContentHeight()
+
+    APP.syntaxFix()
 
 APP.init()

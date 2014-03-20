@@ -6,6 +6,24 @@ nav {
   margin: 0 auto;
   width: 100%;
 
+  .home &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -100%;
+    left: 50%;
+    margin-left: -10px;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-top: 10px solid $black;
+  }
+
+  .post & {
+    display: block;
+    position: static;
+  }
+
   .nav-list {
     padding: 1em;
     text-align: center;
@@ -36,5 +54,11 @@ nav {
   .icon-twitter-logo {
     position: relative;
     top: 7px;
+  }
+}
+
+.nav-no-arrow {
+  &:before {
+    display: none !important;
   }
 }

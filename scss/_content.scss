@@ -34,7 +34,15 @@ article {
     background-color: $black;
   }
 
+  &:first-child {
+    margin-top: 0;
+  }
+
   &:last-child {
+    .post & {
+      margin-bottom: 0;
+    }
+
     &:before {
       display: none;
     }
