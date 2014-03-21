@@ -3,14 +3,18 @@
   {{body}}
 
   {% comment %} Loop through any posts and show an excerpt {% endcomment %}
-  {% for post in posts %}
+  {% for post in site.posts limit:site.meta.post-limit %}
 
     <article class="post-excerpt">
       <div class="article-wrapper">
         <h2>{{post.title}}</h2>
-        <a class="permalink" href="{{post.url}}">permalink</a>
         <p class="date">{{post.date | date: "%b %d, %Y"}}</p>
-        {{post.body | strip_html | truncatewords: 100}}
+        <div>
+          {{post.body | truncatewords: 100}}
+        </div>
+        <div>
+          <a class="permalink" href="{{post.url}}">permalink &rarr;</a>
+        </div>
       </div>
     </article>
 

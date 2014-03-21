@@ -7,7 +7,8 @@ code[class*="language-"],
 pre[class*="language-"] {
 	color: white;
 	direction: ltr;
-	font-family: Consolas, Monaco, 'Andale Mono', monospace;
+	font-family: body;
+  display: block;
 	text-align: left;
 	text-shadow: 0 -.1em .2em black;
 	white-space: pre;
@@ -31,12 +32,10 @@ pre[class*="language-"],
 
 /* Code blocks */
 pre[class*="language-"] {
-	border-radius: .5em;
-	border: .3em solid hsl(0,0%,33%); /* #282A2B */
 	box-shadow: 1px 1px .5em black inset;
 	margin: .5em 0;
 	overflow: auto;
-	padding: 1em;
+	padding: .5em;
 }
 pre[class*="language-"]::selection { /* Safari */
 	background:hsl(200, 4%, 16%); /* #282A2B */
@@ -60,8 +59,6 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
-	border-radius: .3em;
-	border: .13em solid hsl(0,0%,33%); /* #545454 */
 	box-shadow: 1px 1px .3em -.1em black inset;
 	padding: .15em .2em .05em;
 }
