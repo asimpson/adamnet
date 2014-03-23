@@ -1,7 +1,5 @@
 {% capture content %}
 
-  {{body}}
-
   {% comment %} Loop through any posts and show an excerpt {% endcomment %}
   {% for post in site.posts limit:site.meta.post-limit %}
 

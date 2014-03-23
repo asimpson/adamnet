@@ -6,7 +6,7 @@ module.exports = (grunt) ->
   grunt.loadTasks "grunt"
 
   # Clean, compile and concatenate JS
-  grunt.registerTask "js", [ "coffee", "bower", "concat:js" ]
+  grunt.registerTask "js", [ "coffee", "bower", "concat:js", "uglify"]
 
   # Build tasks
   grunt.registerTask "build", [ "clean:all", "js", "copy", "compass:build", "grunticon"]

@@ -18,3 +18,4 @@ bower_components/*
 .DS_Store
 *.esproj
 *.sublime-*
+s3_website.yml

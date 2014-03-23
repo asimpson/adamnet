@@ -64,15 +64,28 @@ a {
   &:visited {
     color: $link-color;
   }
+}
+
+.brackets {
+  text-decoration: none;
 
   &:before {
     content: "[";
-    display: inline;
+    display: inline-block;
   }
 
   &:after {
     content: "]";
-    display: inline;
+    display: inline-block;
+  }
+}
+.no-brackets {
+  &:before {
+    display: none;
+  }
+
+  &:after {
+    display: none;
   }
 }
 
@@ -109,8 +122,30 @@ em {
   text-align: center;
 
   a {
-    display: inline-block;
-    vertical-align: top;
-    padding: 0 .5em;
+    display: block;
+    padding: 1em .5em;
+
+    @include sb-media(35.9375em) {
+      display: inline-block;
+      vertical-align: top;
+      padding: 0 .5em;
+    }
+  }
+}
+
+.post-date {
+  font-size: 1.3em;
+}
+
+.post-link {
+  padding: 2em 0;
+  border-bottom: 1px solid $black;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  a {
+    display: block;
   }
 }

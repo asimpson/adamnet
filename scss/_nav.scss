@@ -58,6 +58,11 @@ nav {
   }
 }
 
+.js .offScreen {
+  position: absolute;
+  top: -50px;
+}
+
 .nav-no-arrow {
   &:before {
     display: none !important;

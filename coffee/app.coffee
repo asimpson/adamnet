@@ -12,11 +12,17 @@ window.APP =
   syntaxFix: ->
     $("code").wrap("<pre></pre>")
 
+  linkStyles: ->
+    anchorsWithImages = $("a img").parent()
+    $("a").not(anchorsWithImages).addClass "brackets"
+    anchorsWithImages.addClass "no-brackets"
+
   init: ->
     if $("body").hasClass "home"
       window.onscroll = APP.removeArrow
       APP.setContentHeight()
 
     APP.syntaxFix()
+    APP.linkStyles()
 
 APP.init()
