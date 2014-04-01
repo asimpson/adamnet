@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% for page in site.pages %}
+  <url>
+    <loc>http://adamsimpson.net{{page.url}}</loc>
+    <lastmod>{{page.updated_at | date: "%Y-%m-%d"}}</lastmod>
+    <priority>1.0</priority>
+  </url>
+  {% if page.slug == 'writing' %}
+    {% for post in page.posts %}
+    <url>
+      <loc>http://adamsimpson.net{{post.url}}</loc>
+      <lastmod>{{post.updated_at | date: "%Y-%m-%d"}}</lastmod>
+      <priority>0.5</priority>
+    </url>
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+</urlset>
