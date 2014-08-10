@@ -9,7 +9,7 @@ module.exports = (grunt) ->
   grunt.registerTask "js", [ "coffee", "bower", "concat:js", "uglify"]
 
   # Build tasks
-  grunt.registerTask "build", [ "clean:all", "js", "copy", "compass:build", "grunticon"]
+  grunt.registerTask "build", [ "clean:all", "js", "copy", "compass:build" ]
 
   # Default task
   grunt.registerTask "default", "build"

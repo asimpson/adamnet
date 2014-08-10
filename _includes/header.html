@@ -1,8 +1,5 @@
 <!doctype html>
-<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
   <title>{{site.title}}{{pageTitle}}</title>
@@ -10,31 +7,32 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta name="google-site-verification" content="1SqDp4KIo6LxXI9FDmfWmSnIyUc4ktABvpvttPS1d-4" />
   <link rel="alternate" type="application/rss+xml" title="adamsimpson.net rss" href="{{site.feed_url}}">
-  <!--[if (gte IE 9) | (IEMobile)]><!-->
-      <link href="/assets/css/styles.css" rel="stylesheet">
-  <!--<![endif]-->
   <script>
-    window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.createElementNS||!t.document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||window.opera&&-1===navigator.userAgent.indexOf("Chrome")),o=function(o){var r=t.document.createElement("link"),a=t.document.getElementsByTagName("script")[0];r.rel="stylesheet",r.href=e[o&&n?0:o?1:2],a.parentNode.insertBefore(r,a)},r=new t.Image;r.onerror=function(){o(!1)},r.onload=function(){o(1===r.width&&1===r.height)},r.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="}};
-    grunticon(["/assets/grunticon/icons.data.svg.css", "/assets/grunticon/icons.data.png.css", "/assets/grunticon/icons.fallback.css"]);
-  </script>
-  <noscript>
-    <link href="/assets/grunticon/icons.fallback.css" rel="stylesheet">
-  </noscript>
-  <script>
+    //js class
     var root = document.getElementsByTagName( 'html' )[0];
     root.setAttribute( "class", "js" );
+
+    //load css
+    function loadCSS(e,t,n){"use strict";var i=window.document.createElement("link");var o=t||window.document.getElementsByTagName("script")[0];i.rel="stylesheet";i.href=e;i.media="only x";o.parentNode.insertBefore(i,o);setTimeout(function(){i.media=n||"all"})}
+    loadCSS( "/assets/css/styles.css" );
   </script>
+  <style>
+    body{ font-family: sans-serif; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgb(45, 45, 45); background-position: initial initial; background-repeat: initial initial; }
+    body{ font-family: body; }
+    .page-wrapper{ position: relative; width: 100%; }
+    article{ font-size: 1.3em; line-height: 1.7; margin-top: 15em; margin-right: auto; margin-bottom: 15em; margin-left: auto; color: rgb(191, 191, 191); position: relative; }
+    article:first-child{ margin-top: 0px; }
+    article h2{ line-height: normal; text-transform: uppercase; font-size: 1.5em; }
+    a{ font-size: 1.3rem; color: rgb(4, 132, 204); }
+    .brackets{ text-decoration: none; }
+    .mw-wrap{ max-width: 800px; width: 90%; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; }
+    pre{ background-color: rgb(191, 191, 191); color: rgb(45, 45, 45); display: inline; padding-top: 0.2em; padding-right: 0.6em; padding-bottom: 0.2em; padding-left: 0.6em; white-space: normal; }
+    blockquote{ border-left-width: 5px; border-left-style: solid; border-left-color: rgb(191, 191, 191); margin-top: 2em; margin-bottom: 2em; margin-left: 1em; margin-right: 0px; padding-left: 1em; }
+    em{ font-style: normal; color: rgb(103, 201, 115); }
+  </style>
+  <noscript>
+    <link href="/assets/css/styles.css" rel="stylesheet">
+  </noscript>
 </head>
 <body class={% if home? %}"home"{%else%}"post"{%endif%}>
-  <nav>
-    <ul class="nav-list">
-      {% if home? %}
-        <li><a class="icon-github-logo" href="{{site.meta.github}}">Github</a></li>
-        <li><a class="icon-twitter-logo" href="{{site.meta.twitter}}">Twitter</a></li>
-        <li><a class="icon-adn-logo" href="{{site.meta.adn}}">App.net</a></li>
-      {%else%}
-        <li><a class="icon-blog-logo" href="/">Return Home</a></li>
-      {% endif %}
-    </ul>
-  </nav>
   <div class="page-wrapper">

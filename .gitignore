@@ -9,6 +9,8 @@ js/*
 specs/js/*
 reports/*
 assets/*
+critical.css
+compressed/*
 
 # We don't want to check in packages
 node_modules/*

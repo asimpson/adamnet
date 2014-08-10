@@ -12,6 +12,12 @@ body {
   width: 100%;
 }
 
+.post-excerpt:last-of-type {
+  &:before {
+    display: none;
+  }
+}
+
 article {
   font-size: 1.3em;
   line-height: 1.7;
@@ -97,7 +103,7 @@ a {
 
 pre {
   background-color: $black;
-  color: white;
+  color: $new-black;
   display: inline;
   padding: .2em .6em;
   white-space: normal;
@@ -139,6 +145,7 @@ em {
 
 .post-link {
   padding: 2em 0;
+  color: $black;
   border-bottom: 1px solid $black;
 
   &:last-child {
